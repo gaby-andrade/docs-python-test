@@ -1,0 +1,2 @@
+notebook==6.0.2
+RISE==5.6.1.dev3
