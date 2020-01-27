@@ -13314,7 +13314,7 @@ $(document).ready(function(){
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -13424,7 +13424,7 @@ Got:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Asser&#231;&#245;es">Asser&#231;&#245;es<a class="anchor-link" href="#Asser&#231;&#245;es">&#182;</a></h2><p>Valide que o seu teste validou o cenário esperado</p>
+<h2 id="Asser&#231;&#245;es">Asser&#231;&#245;es<a class="anchor-link" href="#Asser&#231;&#245;es">&#182;</a></h2><p>Valide que o cenário do seu código ocorreu como esperado</p>
 <p><a href="https://docs.python.org/3/library/unittest.html#assert-methods">https://docs.python.org/3/library/unittest.html#assert-methods</a></p>
 
 </div>
@@ -13451,7 +13451,7 @@ Got:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Exemplos">Exemplos<a class="anchor-link" href="#Exemplos">&#182;</a></h1><p>Me mostre o código!</p>
+<h1 id="Exemplos">Exemplos<a class="anchor-link" href="#Exemplos">&#182;</a></h1><p>Show me the code!</p>
 <p><img src="https://media.giphy.com/media/q6RoNkLlFNjaw/giphy.gif" alt="Show me the code"></p>
 
 </div>
@@ -13460,33 +13460,65 @@ Got:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exemplo-1:-S3">Exemplo 1: S3<a class="anchor-link" href="#Exemplo-1:-S3">&#182;</a></h2>
+<h3 id="Pontos-Relevantes">Pontos Relevantes<a class="anchor-link" href="#Pontos-Relevantes">&#182;</a></h3><ul>
+<li>Divida para conquistar: Mantenha a estrutura de arquivos organizadas. Se um projeto é grande, é sempre uma boa prática dividir em arquivos menores (isso facilita a manutenção e legibilidade)</li>
+<li>Um teste também deve ser limpo igual ao código principal (Clean Code - Robert C. Martin)</li>
+<li>Use nomes descritivos para as funções de teste, mesmo que seja um nome muito longo</li>
+<li>Pense em corner cases (cenários fora do padrão esperado)</li>
+</ul>
+
 </div>
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Resumo-do-Exemplo-1:">Resumo do Exemplo 1:<a class="anchor-link" href="#Resumo-do-Exemplo-1:">&#182;</a></h3><ul>
-<li>Faça bom uso dos logs ao invés dos prints. Para debbugar, existe um nível de log específico para isso </li>
-<li>Typehint ajuda na leitura do código: <a href="https://medium.com/@diogommartins/python-3-e-type-hints-40e80a9e8214">https://medium.com/@diogommartins/python-3-e-type-hints-40e80a9e8214</a></li>
+<h1 id="Errors-should-never-pass-silently">Errors should never pass silently<a class="anchor-link" href="#Errors-should-never-pass-silently">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Zen-of-Python-(PEP-20)">Zen of Python (PEP 20)<a class="anchor-link" href="#Zen-of-Python-(PEP-20)">&#182;</a></h2><p><a href="https://www.python.org/dev/peps/pep-0020/#id3">https://www.python.org/dev/peps/pep-0020/#id3</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="PEP-(Python-Enhancement-Proposals)">PEP (Python Enhancement Proposals)<a class="anchor-link" href="#PEP-(Python-Enhancement-Proposals)">&#182;</a></h2><p><a href="https://www.python.org/dev/peps/">https://www.python.org/dev/peps/</a></p>
+<p>Alguns exemplos:</p>
+<ul>
+<li>PEP 8 (Style Guide)</li>
+<li>PEP 20 (Zen of Python)</li>
+<li>PEP 483 e PEP 484 (Type Hint)</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Considera&#231;&#245;es-Adicionais">Considera&#231;&#245;es Adicionais<a class="anchor-link" href="#Considera&#231;&#245;es-Adicionais">&#182;</a></h3><ul>
+<li>Faça bom uso dos <a href="https://docs.python.org/3/library/logging.html">logs</a> ao invés dos prints. <a href="https://docs.python.org/3/library/logging.html#logging.Logger.debug">Para debbugar, existe um nível de log específico para isso</a> </li>
+<li><a href="https://medium.com/@diogommartins/python-3-e-type-hints-40e80a9e8214">Typehint ajuda na leitura do código</a> </li>
 <li>Escrever em pequenas unidades ajudam a testar o código e a melhorar sua clareza</li>
 <li>Nem sempre um código com menos linhas é melhor</li>
 </ul>
 
 </div>
 </div>
-</div><aside class="notes">
-
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vão entrar mais exemplos</p>
-
+<h2 id="Tamb&#233;m-existem-outros-tipos-de-testes">Tamb&#233;m existem outros tipos de testes<a class="anchor-link" href="#Tamb&#233;m-existem-outros-tipos-de-testes">&#182;</a></h2>
 </div>
 </div>
-</div>
-</aside></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13505,6 +13537,14 @@ Got:
 <li>Valida o comportamento em um ambiente próximo ao de produção (homologação ou staging)</li>
 <li>Valida interação com usuário (quando houver) e validação das regras de negócio</li>
 </ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Now-is-better-than-never.">Now is better than never.<a class="anchor-link" href="#Now-is-better-than-never.">&#182;</a></h2><h2 id="Although-never-is-often-better-than-right-now.">Although never is often better than <em>right</em> now.<a class="anchor-link" href="#Although-never-is-often-better-than-right-now.">&#182;</a></h2><p><a href="https://www.python.org/dev/peps/pep-0020/#id3">Zen of Python (PEP 20)</a></p>
 
 </div>
 </div>
