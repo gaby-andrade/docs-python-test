@@ -3,8 +3,8 @@ import datetime
 import boto3
 from botocore.exceptions import ClientError
 
-from tests_examples.example_2.app.utils import dir_path
-from tests_examples.example_2.app.config import settings, logger
+from tests_examples.example_3.app.utils import dir_path
+from tests_examples.example_3.app.config import settings, logger
 
 s3 = boto3.resource(
     "s3",

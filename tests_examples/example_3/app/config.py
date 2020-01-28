@@ -17,5 +17,5 @@ class Settings(BaseSettings):
 settings = Settings()
 
 logging.basicConfig()
-logger = logging.getLogger("example_2")
+logger = logging.getLogger("example_3")
 logger.setLevel(logging.DEBUG)

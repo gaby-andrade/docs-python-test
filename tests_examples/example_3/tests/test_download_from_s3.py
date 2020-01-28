@@ -5,9 +5,9 @@ from unittest.mock import patch
 from botocore.exceptions import ClientError
 from freezegun import freeze_time
 
-from tests_examples.example_2.app.config import settings
-from tests_examples.example_2.app.download_from_s3 import download_file_from_s3
-from tests_examples.example_2.app.utils import dir_path
+from tests_examples.example_3.app.config import settings
+from tests_examples.example_3.app.download_from_s3 import download_file_from_s3
+from tests_examples.example_3.app.utils import dir_path
 
 
 @freeze_time("2020-01-27")
@@ -16,13 +16,13 @@ class DownloadObjectTest(unittest.TestCase):
         self.date_today = datetime.date.today()
         self.key_to_download = f"{settings.S3_FOLDER_PREFIX}/{self.date_today}.txt"
         self.log_mock = patch(
-            "tests_examples.example_2.app.download_from_s3.logger.info"
+            "tests_examples.example_3.app.download_from_s3.logger.info"
         ).start()
 
     def test_it_download_is_successful(self):
 
         file_name = f"{dir_path}/tmp/mussum-{self.date_today}.txt"
-        with patch("tests_examples.example_2.app.download_from_s3.s3") as download_mock:
+        with patch("tests_examples.example_3.app.download_from_s3.s3") as download_mock:
 
             download_file_from_s3()
 
@@ -33,7 +33,7 @@ class DownloadObjectTest(unittest.TestCase):
 
     def test_it_logs_when_object_to_download_is_not_found(self):
         with patch(
-            "tests_examples.example_2.app.download_from_s3.download_s3_object",
+            "tests_examples.example_3.app.download_from_s3.download_s3_object",
             side_effect=ClientError(
                 {"Error": {"Code": "404", "Message": "Not Found"}}, "operacao"
             ),
@@ -46,7 +46,7 @@ class DownloadObjectTest(unittest.TestCase):
 
     def test_it_raises_exception_if_another_error_happens(self):
         with patch(
-            "tests_examples.example_2.app.download_from_s3.download_s3_object",
+            "tests_examples.example_3.app.download_from_s3.download_s3_object",
             side_effect=ClientError(
                 {"Error": {"Code": "500", "Message": "Internal Error"}}, "operacao"
             ),

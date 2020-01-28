@@ -2,7 +2,7 @@ import os
 import unittest
 from unittest.mock import patch
 
-from tests_examples.example_1.file_operations import group_content, remove
+from tests_examples.example_2.file_operations import group_content, remove
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 
