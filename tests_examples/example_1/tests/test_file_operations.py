@@ -33,7 +33,7 @@ class TestGroupContent(unittest.TestCase):
 
         self.assertEqual(result, expected)
 
-    def test_if_returns_an_empty_list_when_there_is_not_content_in_file(self):
+    def test_if_returns_an_empty_list_when_there_is_no_content_in_file(self):
         result = group_content(files=[f"{PATH}/fixtures/empty_file.txt"])
         expected = []
         self.assertListEqual(result, expected)
