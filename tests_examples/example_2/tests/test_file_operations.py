@@ -1,13 +1,13 @@
 import os
-import unittest
+from unittest import TestCase
 from unittest.mock import patch
 
-from tests_examples.example_2.file_operations import group_content, remove
+from tests_examples.example_2.app.file_operations import group_content, remove
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 
 
-class TestGroupContent(unittest.TestCase):
+class TestGroupContent(TestCase):
     def setUp(self) -> None:
         self.file_names = [
             f"{PATH}/fixtures/fruit_list_en.txt",
@@ -39,7 +39,7 @@ class TestGroupContent(unittest.TestCase):
         self.assertListEqual(result, expected)
 
 
-class TestRemove(unittest.TestCase):
+class TestRemove(TestCase):
     def test_if_remove_all_files_received(self):
         with patch.object(os, "remove") as remove_mock:
             remove(files=["rio.txt", "tokyo.txt", "professor.txt"])
