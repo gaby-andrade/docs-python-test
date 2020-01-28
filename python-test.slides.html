@@ -13330,7 +13330,7 @@ $(document).ready(function(){
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -13458,8 +13458,40 @@ Got:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Test-Runner">Test Runner<a class="anchor-link" href="#Test-Runner">&#182;</a></h2><ul>
+<li>Aquele que vai fazer seus testes rodarem</li>
+<li>Orquestra a execução dos testes e exibe para o usuário o resultado dos testes</li>
+</ul>
+<p>Com <a href="https://docs.python.org/3/library/unittest.html#test-discovery">unittest</a>:</p>
+<blockquote><p>python -m unittest discover -v -s &lt; diretorio &gt;</p>
+</blockquote>
+<p>Com <a href="https://docs.pytest.org/en/latest/usage.html">pytest</a>:</p>
+<blockquote><p>python -m pytest -v &lt; diretorio &gt;</p>
+</blockquote>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Coverage">Coverage<a class="anchor-link" href="#Coverage">&#182;</a></h2><p>Cobertura de testes</p>
+<ul>
+<li>Valide o que precisa ser testado</li>
+<li>100% de cobertura é diferente de ter todos os cenários testados!</li>
+</ul>
 <p><a href="https://coverage.readthedocs.io/en/coverage-5.0.3/cmd.html">https://coverage.readthedocs.io/en/coverage-5.0.3/cmd.html</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://coverage.readthedocs.io/en/coverage-5.0.3/#quick-start">https://coverage.readthedocs.io/en/coverage-5.0.3/#quick-start</a></p>
+<blockquote><p>coverage run -m unittest discover -v -s &lt; diretorio &gt;</p>
+<p>coverage report</p>
+</blockquote>
 
 </div>
 </div>
@@ -13481,6 +13513,7 @@ Got:
 <li>Um teste também deve ser limpo igual ao código principal (Clean Code - Robert C. Martin)</li>
 <li>Use nomes descritivos para as funções de teste, mesmo que seja um nome muito longo</li>
 <li>Pense em corner cases (cenários fora do padrão esperado)</li>
+<li>Um teste não deve engessar a implementação do seu código</li>
 </ul>
 
 </div>
@@ -13508,6 +13541,7 @@ Got:
 <ul>
 <li>PEP 8 (Style Guide)</li>
 <li>PEP 20 (Zen of Python)</li>
+<li>PEP 350 (Codetags)</li>
 <li>PEP 483 e PEP 484 (Type Hint)</li>
 <li>[...]</li>
 </ul>
