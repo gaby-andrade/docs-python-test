@@ -1,10 +1,10 @@
-import unittest
 from random import randint
+from unittest import TestCase
 
 from tests_examples.example_1.division_detect import division_detect
 
 
-class TestDivisionDetect(unittest.TestCase):
+class TestDivisionDetect(TestCase):
     def setUp(self) -> None:
         self.random_numerator = randint(0, 100000)
 
@@ -19,5 +19,3 @@ class TestDivisionDetect(unittest.TestCase):
         self.assertFalse(result)
 
 
-if __name__ == "__main__":
-    unittest.main()

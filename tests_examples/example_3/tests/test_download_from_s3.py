@@ -1,5 +1,5 @@
 import datetime
-import unittest
+from unittest import TestCase
 from unittest.mock import patch
 
 from botocore.exceptions import ClientError
@@ -11,12 +11,12 @@ from tests_examples.example_3.app.utils import dir_path
 
 
 @freeze_time("2020-01-27")
-class DownloadObjectTest(unittest.TestCase):
+class DownloadObjectTest(TestCase):
     def setUp(self):
         self.date_today = datetime.date.today()
         self.key_to_download = f"{settings.S3_FOLDER_PREFIX}/{self.date_today}.txt"
         self.log_mock = patch(
-            "tests_examples.example_3.app.download_from_s3.logger.info"
+            "tests_examples.example_3.app.download_from_s3.logger.exception"
         ).start()
 
     def test_it_download_is_successful(self):
@@ -44,7 +44,7 @@ class DownloadObjectTest(unittest.TestCase):
                 "The file with key mussumipsum/2020-01-27.txt was not found"
             )
 
-    def test_it_raises_exception_if_another_error_happens(self):
+    def test_it_raises_exception_if_another_error_with_code_differently_from_not_found_happens(self):
         with patch(
             "tests_examples.example_3.app.download_from_s3.download_s3_object",
             side_effect=ClientError(

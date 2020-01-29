@@ -28,7 +28,7 @@ def download_file_from_s3() -> None:
         download_s3_object(key, output_file_path)
     except ClientError as e:
         if e.response["Error"]["Code"] == "404":
-            logger.info(f"The file with key {key} was not found")
+            logger.exception(f"The file with key {key} was not found")
         else:
             raise
 
